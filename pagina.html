@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .centered-image {
+            display: block;
+            margin: 0 auto;
+            width: 28%; /* Ajusta el tamaño de la imagen según sea necesario */
+        }
+        .text {
+            text-align: center; /* Centra el texto */
+            margin-top: 28px; /* Espacio entre la imagen y el texto */
+        }
+        .audio-player {
+            display: block;
+            margin: 20px auto; /* Centra el reproductor de audio */
+            text-align: center; /* Centra el reproductor de audio */
+        }
+        .play-button {
+            display: block;
+            margin: 20px auto; /* Centra el botón de reproducción */
+            text-align: center;
+        }
+    </style>
+    <title>Mensaje, Imagen y Audio</title>
+</head>
+<body>
+    <img src="img/muak.jpg" alt="Descripción de la imagen" class="centered-image">
+    <p class="text">
+        Y para terminar, mi amor, quiero que sepas cuánto te amo. Eres increíble y me encantas más de lo que las palabras pueden expresar. No quiero que nos distanciemos el uno del otro. Estoy mejorando poco a poco y haciendo todo lo que está a mi alcance para que, incluso cuando tengamos diferencias, podamos fortalecer lo nuestro y que nada sea un impedimento para estar juntos. Te amo mucho, muchísimo. 
+        MUAK MUAK MUAK MI AMORRR TE AMOOO MI MAMI HERMOSA MUAAKKK ♥♥♥
+    </p>
+
+    <div class="audio-player">
+        <audio id="audio" controls>
+            <source src="voz.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+
+    <div class="play-button">
+        <button onclick="document.getElementById('audio').play()">Reproducir Audio</button>
+    </div>
+</body>
+</html>

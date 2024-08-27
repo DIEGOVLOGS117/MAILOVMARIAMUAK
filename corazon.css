@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222f3e;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@keyframes animacion {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80% {
+        transform: rotate(-45deg) scale(1.0);
+    }
+}
+
+.corazon-link {
+    display: inline-block;
+}
+
+.corazon {
+    width: 150px; /* Tamaño aumentado */
+    height: 150px; /* Tamaño aumentado */
+    background-color: #ff4757;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -20px 20px 90px #ff6b81;
+    animation: animacion .5s linear infinite;
+    margin-bottom: 20px; /* Espacio entre el corazón y el botón */
+}
+
+.corazon::before,
+.corazon::after {
+    content: "";
+    position: absolute;
+    width: 150px; /* Tamaño aumentado */
+    height: 150px; /* Tamaño aumentado */
+    background-color: #ff4757;
+    border-radius: 50%;
+}
+
+.corazon::before {
+    top: -75px; /* Ajustado para el nuevo tamaño */
+    left: 0;
+}
+
+.corazon::after {
+    top: 0;
+    left: 75px; /* Ajustado para el nuevo tamaño */
+}
+
+.button {
+    background-color: #ff4757;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #ff6b81;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
